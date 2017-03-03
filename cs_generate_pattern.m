@@ -3,6 +3,7 @@ function M = cs_generate_pattern (dim, accel, q, seed, pf)
 if nargin < 3, q = 1; end
 if nargin < 4, seed = 11235813; end
 if nargin < 5, pf = 1; end
+rng('default');
 if is_octave()
   rand('state', seed);
 else
